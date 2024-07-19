@@ -1,11 +1,10 @@
 #include <iostream>
+#include <algorithm>
+#include<cmath>
 
 using namespace std;
 
 int main()
 {
-  char a[10000],b[10000];
-  cin>>a>>b;
-  
-  return 0;
+   cout<<"Hello World!";
 }
