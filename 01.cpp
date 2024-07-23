@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
-  string a,c[10]={"NLCS","BHA","KIS","SJA"},b[10]={"North London Collegiate School","Branksome Hall Asia","Korea International School","t. Johnsbury Academy"};
+  string a,c[10]={"NLCS","BHA","KIS","SJA"},b[10]={"North London Collegiate School","Branksome Hall Asia","Korea International School","St. Johnsbury Academy"};
   int i;
 
   cin>>a;
