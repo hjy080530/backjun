@@ -1,23 +1,16 @@
 #include <iostream>
-#include <algorithm>
-#include <stdio.h>
+
 using namespace std;
 
 int main() {
-  int a;
-
+  int a,i;
   cin>>a;
-
-  if(a>89)
-    cout<<"A";
-  else if(a>79)
-    cout<<"B";
-  else if(a>69)
-    cout<<"C";
-  else if(a>59)
-    cout<<"D";
-  else 
-    cout<<"F";
-
+  int b,sum=0;
+  for(i=0; i<a; i++){
+    cin>>b;
+    sum+=b;
+  }
+  cout<<sum;
   return 0;
 }
+//걍 좀 해줘
