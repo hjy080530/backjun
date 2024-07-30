@@ -4,30 +4,15 @@
 using namespace std;
 
 int main() {
-  string a;
-  int i,j,b[1000]={0},mx=-9999999,ch=0;
+  long long int a,b;
 
-  cin>>a;
-  //snclksncl
-  for(i=0; i<a.size(); i++)
-    a[i]=toupper(a[i]);
+  while(1){
+    cin>>a>>b;
 
-  for(i=0; i<a.size(); i++){
-    b[(int)a[i]]++;
-    mx=max(mx,b[i]);
+    if(a==0&&b==0) break;
+    else if(a>b)cout<<"Yes"<<"\n";
+    else cout<<"No"<<"\n";
   }
-    
-  for(i=65; i<91; i++){
-    if(b[i]==b[mx]){
-      ch++;
-      break;
-    }
-  }
-
-  if(ch>1)
-    cout<<"?";
-  else
-    cout<<mx;
-
+//dcfvfvdvdfvdavdvd
   return 0;
 }
