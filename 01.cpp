@@ -13,6 +13,6 @@ int main() {
     else if(a>b)cout<<"Yes"<<"\n";
     else cout<<"No"<<"\n";
   }
-//dcfvfvdvdfvdavdvd
+  //ㅊㅁㄴㅊㅁㄴㅊㅁㄴㅇㅊㅁㄴㅊㅁㄴ
   return 0;
 }
