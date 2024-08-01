@@ -1,18 +1,14 @@
 #include <iostream>
-#include <string>
-#include <algorithm>
+
 using namespace std;
 
 int main() {
   long long int a,b;
 
-  while(1){
-    cin>>a>>b;
+  cin>>a>>b;
 
-    if(a==0&&b==0) break;
-    else if(a>b)cout<<"Yes"<<"\n";
-    else cout<<"No"<<"\n";
-  }
-  //ㅊㅁㄴㅊㅁㄴㅊㅁㄴㅇㅊㅁㄴㅊㅁㄴ
+  if(a>b)cout<<a-b;
+  else cout<<b-a;
+
   return 0;
 }
