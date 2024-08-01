@@ -1,14 +1,20 @@
 #include <iostream>
-
+#include <string>
 using namespace std;
 
 int main() {
-  long long int a,b;
-
-  cin>>a>>b;
-
-  if(a>b)cout<<a-b;
-  else cout<<b-a;
+  int n;
+  string k;
+  cin>>n;
+  while (n)
+  {
+    cin>>k;
+    if(k.length()>5&&k.length()<10)cout<<"yes"<<"\n";
+    else cout<<"no";
+    n--;
+    //xsax
+  }
+  
 
   return 0;
 }
