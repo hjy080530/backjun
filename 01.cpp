@@ -12,7 +12,7 @@ int main() {
     if(k.length()>5&&k.length()<10)cout<<"yes"<<"\n";
     else cout<<"no";
     n--;
-    //xsax
+    //dclcjlaclk
   }
   
 
