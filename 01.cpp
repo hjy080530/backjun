@@ -1,12 +1,20 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main() {
-  long long int i,n,hap=0;
+  string a;
+  int i,n,ch[100]={0};
   cin>>n;
-  for(i=1; i<=n; i++){
-    if(n%i==0)hap+=i;
+  getline(cin,a);
+  cout<<endl<<a<<endl;
+
+  for(i=0; i<n; i++){
+    if(a[i]==' ')continue;
+    else if(a[i]==',')continue;
+    else if(a[i]=='.')continue;
+    else ch[(int)a[i]]++;
   }
-  cout<<hap;
+  cout<<max_element(ch,ch+100);
   return 0;
 }
