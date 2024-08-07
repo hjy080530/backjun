@@ -9,7 +9,7 @@ int main() {
   while(n){
     cin>>a;
     int k=0;
-    if(a==1){
+    if(a==1||a==4){
       n--;
       continue;
     }
@@ -24,7 +24,7 @@ int main() {
         h++;
       }
     }
-    n--;
+    n--;///csdcsd
   }
   cout<<h;
 
