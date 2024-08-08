@@ -1,32 +1,26 @@
 #include <iostream>
-#include <stdio.h>
-#include <algorithm>
 using namespace std;
 
 int main() {
-  int n,i,a,h=0;
+  int n,m,i,ac[1000],h=0,j;
+  string a[1000],b;
   cin>>n;
-  while(n){
-    cin>>a;
-    int k=0;
-    if(a==1||a==4){
-      n--;
-      continue;
-    }
-    else{
-      for(i=2; i<a; i++){
-        if(i%a==0){
-          k++; 
-          break;
-        }
-      }
-      if(k==0){
+  for(i=0; i<n; i++)cin>>a[i];
+  cin>>m;
+  for(i=0; i<m; i++){
+    cin>>b;
+    for(j=0; j<n; j++){
+      if(b==a[j]){
         h++;
+        ac[j]=1;
       }
     }
-    n--;///csdcsd
   }
-  cout<<h;
-
+  cout<<h<<"\n";
+  for(i=0; i<n; i++){
+    if(ac[i]==0){
+      cout<<a[i]<<"\n";
+    }
+  }
   return 0;
 }
