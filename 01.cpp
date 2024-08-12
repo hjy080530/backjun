@@ -1,17 +1,12 @@
 #include <iostream>
+#include<stdio.h>
 using namespace std;
 
 int main() {
-  long long int i,T,a,j;
-  cin>>T;
-  for(i=0; i<T; i++){
-    cin>>a;
-    j=0;
-    while(a){
-      if(a%2==1)cout<<j<<" ";
-      a=a/2;
-      j++;
-    }
-  }
+  int a,b;
+
+  cin>>a>>b;
+  if(a%b==0)cout<<a/b;
+  else printf("%.10f",(double)a/b);
   return 0;
 }
