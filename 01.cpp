@@ -12,6 +12,6 @@ int main()
   for(i=0; i<n; i++){
     cin>>a;
     cout<<arr[a]<<"\n";
-  }
+  }//vfcv
   return 0;
 }
