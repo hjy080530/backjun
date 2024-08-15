@@ -7,4 +7,4 @@ int main()
   n--;
   cout<<(n/5)+1;
   return 0;
-}
+}..c.
