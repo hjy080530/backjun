@@ -1,18 +1,33 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-int main()
-{
-  long long int n,i,p[10]={0};
+int main(){
+  int n,i,a;
+
   cin>>n;
-/ㅊㅊ
-  while(n){
-    p[n%10]++;
+
+  if(n<100){
+    a=n%10;
     n=n/10;
+    a+=n;
   }
-  if(p[6]>p[9])p[6]=p[6]-p[9];
-  else p[9]=p[9]-p[6];
-  n=max_element(p,p+10);
-  cout<<n;
+  else if(n<1000){
+    if(n%10==0){
+      a=n%100;
+      n=n/100;
+      a+=n;
+    }
+    else{
+      a=n%10;
+      n=n/10;
+      a+=n;
+    }
+  }
+  else{
+    a=n%100;
+    n=n/100;
+    a+=n;
+  }
+  cout<<a;
   return 0;
 }
