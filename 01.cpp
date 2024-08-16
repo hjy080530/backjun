@@ -1,33 +1,34 @@
 #include <iostream>
+#include <stack>
 #include <algorithm>
 using namespace std;
 int main(){
-  int n,i,a;
+  stack <int> st;
+  int n,k;
+  string a;
 
   cin>>n;
 
-  if(n<100){
-    a=n%10;
-    n=n/10;
-    a+=n;
-  }
-  else if(n<1000){
-    if(n%10==0){
-      a=n%100;
-      n=n/100;
-      a+=n;
+  while(n){
+    cin>>a;
+    if(a=="push"){
+      cin>>k;
+      st.push(k);
     }
-    else{
-      a=n%10;
-      n=n/10;
-      a+=n;
+    else if(a=="pop"){
+      if(st.empty())cout<<"-1\n";
+      else st.pop();
     }
+    else if(a=="size")cout<<st.size()<<"\n";
+    else if(a=="empty"){
+      if(st.empty())cout<<"1\n";
+      else cout<<"0\n";
+    }
+    else if(a=="top"){
+      if(st.empty())cout<<"-1\n";
+      else cout<<st.top()<<"\n";
+    }
+    n--;
   }
-  else{
-    a=n%100;
-    n=n/100;
-    a+=n;
-  }
-  cout<<a;
   return 0;
 }
