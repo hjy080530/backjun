@@ -1,13 +1,17 @@
 #include <iostream>
-#include <algorithm>
 #include <cmath>
 using namespace std;
 
 int main() {
-  int h,w;
-
-  cin>>h>>w;
-
+  int w, h;
+  cin >>w>>h;
+  double len = sqrt(w * w + h * h);
   
+  double rlen=w+h;
+  double dif=rlen-len;
+
+  cout.precision(6);
+  cout <<fixed<<dif<< endl;
+
   return 0;
 }
