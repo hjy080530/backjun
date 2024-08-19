@@ -1,20 +1,19 @@
 #include <iostream>
-
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-  long long int n,m,i,j;
-  cin>>n>>m;
-  for(i=n; i<m; i++){
-    int x=0;
-    for(j=2;j<i; j++){
-      if(i%j==0){
-        x++;
-        break;
-      }
+  int i,P,a[1000],N,count=0;
+  cin>>P>>N;
+  for(i=0; i<N; i++) cin>>a[i];
+  sort(a,a+N);
+  for(i=0; i<N; i++){
+    if(P<200){
+      P+=a[i];
+      count++;
     }
-    if(x==0)cout<<i<<"\n";
   }
+  cout<<count;
 	return 0;
 }
