@@ -1,25 +1,25 @@
-#include <stdio.h>
+#include <iostream>
+#include <algorithm>
+#include <utility>
+using namespace std;
+int main(){
+    int a,N,i,j;
+    pair <int,int> p[1001];
 
-// 재귀적으로 2진수 변환을 수행하는 함수
-void decimalToBinary(int n) {
-    if (n == 0) {
-        return;
+    cin>>N;
+    for(i=0; i<N; i++){
+       cin>>a;
+       p[i]=make_pair(a,0);
     }
-    decimalToBinary(n / 2);  // n을 2로 나눈 몫을 가지고 재귀 호출
-    printf("%d", n % 2);     // n을 2로 나눈 나머지를 출력 (2진수의 현재 자리)
-}
-
-int main() {
-    int num;
-    printf("Enter a positive integer: ");
-    scanf("%d", &num);
-    //ㅁㅇ 
-    if (num == 0) {
-        printf("0");
-    } else {
-        decimalToBinary(num);
+    for(i=0; i<N; i++){
+        for(j=0; j<N; j++){
+            if(p[i].first>p[j].first) p[i].second++;
+            else if(p[i].first==p[j].first){
+                if(j<i) p[i].second++;
+            }
+        }
     }
+    for(i=0; i<N; i++)cout<<p[i].second<<" ";
 
-    printf("\n");
     return 0;
 }
