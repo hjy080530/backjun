@@ -1,25 +1,26 @@
 #include <iostream>
 #include <algorithm>
-#include <utility>
+
+void merge(long long int a[],long long int k){
+    for
+}
+
+
+
 using namespace std;
 int main(){
-    int a,N,i,j;
-    pair <int,int> p[1001];
+    long long int i,n, a[100001], k;
+    cin>>n;
 
-    cin>>N;
-    for(i=0; i<N; i++){
-       cin>>a;
-       p[i]=make_pair(a,0);
+    for(i=0; i<n; i++)cin>>a[i];
+
+    cin>>k;
+
+    for(i=0; i<k; i++){
+        merge(a[],k);
     }
-    for(i=0; i<N; i++){
-        for(j=0; j<N; j++){
-            if(p[i].first>p[j].first) p[i].second++;
-            else if(p[i].first==p[j].first){
-                if(j<i) p[i].second++;
-            }
-        }
-    }
-    for(i=0; i<N; i++)cout<<p[i].second<<" ";
+
+
 
     return 0;
 }
