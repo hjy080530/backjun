@@ -1,26 +1,25 @@
 #include <iostream>
-#include <algorithm>
-
-void merge(long long int a[],long long int k){
-    for
-}
-
-
 
 using namespace std;
-int main(){
-    long long int i,n, a[100001], k;
-    cin>>n;
 
-    for(i=0; i<n; i++)cin>>a[i];
-
-    cin>>k;
-
-    for(i=0; i<k; i++){
-        merge(a[],k);
+int main() {
+    long long int a, n;
+    
+    while (1) {
+        cin>>a;
+        if (a==0) return 0;
+        
+        while (a>=10){
+                n=1;
+            while (a>0) { 
+                    n*=(a%10);
+                    a/=10;
+                }
+                cout<<n<<" "; 
+                a=n;
+            
+        }
+        cout<<"\n"; 
     }
-
-
-
     return 0;
 }
