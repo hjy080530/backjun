@@ -8,9 +8,10 @@ int main() {
     while (1) {
         cin>>a;
         if (a==0) return 0;
-        
+        cout<<a<<" ";
         while (a>=10){
                 n=1;
+                
             while (a>0) { 
                     n*=(a%10);
                     a/=10;
