@@ -11,7 +11,7 @@ int main() {
         cout<<a<<" ";
         while (a>=10){
                 n=1;
-                
+              cout<<n;  
             while (a>0) { 
                     n*=(a%10);
                     a/=10;
