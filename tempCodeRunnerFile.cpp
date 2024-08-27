@@ -1,19 +1,16 @@
- int da[n+1],su[n+1],h[n+1];
+#include <iostream>
 
-    for(i=0; i<n; i++){
-        cin>>da[i];
-        h[i]=da[i];
-    }
-    sort(da,da+n);
-    for(i=0; i<n; i++)su[i]=i+da[i];
-    for(i=0; i<n; i++){
-        for(j=0; j<n; i++){
-            if(da[i]==h[j]){
-            cout<<su[i]-da[i]<<" ";
-            }
+using namespace std;
+
+int main() {
+    long long int a,count=0,i,j;
+    cin>>a;
+    for(i=1; i<=(a/2); i++){
+        for(j=(a/2); j>=0; j--){
+            if(i*j==a)count++;
         }
-        
     }
-    
+    cout<<count*2;
+
     return 0;
 }
