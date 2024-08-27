@@ -15,6 +15,6 @@ int main() {
         }
     }
     cout<<(count*2)+je;
-    cout<<"lsncld";
+    cout<<"lsncvfdvdld";
     return 0;
 }
