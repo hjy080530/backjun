@@ -17,4 +17,4 @@ int main() {
     cout<<(count*2)+je;
 
     return 0;
-}vdv
+}vdv.//vrwvs
