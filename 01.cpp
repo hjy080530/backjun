@@ -12,9 +12,9 @@ int main() {
         if(sqrt(a)==i){
             je++;
 
-        }vfdv
+        }
     }
     cout<<(count*2)+je;
-
+    cout<<"lsncld";
     return 0;
-}vdv.//vrwvs
+}
