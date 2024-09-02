@@ -1,33 +1,45 @@
 #include <iostream>
+#include <stdio.h> 
+#include <vector>
 using namespace std;
-
-
-long long int loop(long long int v, long long int re) {
-    if (v <= 0) {
-        return re;
-    } else {
-        re+=v%10; 
-        v=v/10;
-        re*=10;
-        return loop(v,re);
+void Hex(long long n) {
+    vector<int> digits;
+    
+    while (n > 0) {
+        digits.push_back(n % 16);
+        n /= 16;
     }
+
+    for (int i = digits.size() - 1; i >= 0; i--) {
+        cout << digits[i];
+    }
+    cout<<"\n";
 }
+void Oct (long long n){
+    vector <int>digi ;
+    while (n > 0) {
+        digi.push_back(n % 8);
+        n /= 8;
+    }
 
-
-void f(long long int x, long long int y) {
-    long long int h = loop(x, 0)/10 + loop(y, 0)/10; 
-    long long int result = loop(h, 0)/10;
-    cout<<result<<"\n"; 
+    for (int i = digi.size() - 1; i >= 0; i--) {
+        cout << digi[i];
+    }
+    cout<<" ";
 }
-
 int main() {
-    long long int n, a, b, i;
-    cin >> n;
+    long long int h,i, t, k, n;
+    cin >> t; 
 
-    for (i = 0; i < n; i++) {
-        cin >> a >> b;
-        f(a, b);
+    for (i = 0; i < t; i++) {
+        cin >> k >> n;
+        h=n; 
+        if(n<8)h=0;
+        printf("\n %lld ", k);
+        Oct(n);
+        cout<<n<<" ";
+        Hex(n);
     }
-
+    
     return 0;
 }
