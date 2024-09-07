@@ -1,34 +1,24 @@
 #include <iostream>
-#include <algorithm>
+#include <string>
 using namespace std;
 
-int ten(int n) {
-    if (n < 10) return n;      
-    return ten(n / 10);
+void reverseSubstr(string &str, int start, int end) {
+    while (start < end) {
+        swap(str[start], str[end]);
+        start++;
+        end--;
+    }
 }
+
 int main() {
-    int n, a[10001], b[10001];
-    cin >> n;
-
-    for (int i = 1; i <= n; i++) {
-        for (int j = 0; j < 5; j++) {
-            cin >> a[j];
-        }
-        sort(a, a + 5);  
-        int hap = 0;
-        for (int j = 0; j < 3; j++) {
-            hap += a[j]; 
-        }
-        b[i] = ten(hap); 
+    int n, m;
+    string a;
+    cin >> n >> m;
+    cin >> a;
+    for (int i=0; i<=n-m; i++) {
+        reverseSubstr(a, i, i + m - 1);
     }
-
-    int *c = max_element(b + 1, b + n + 1); 
-    for (int i = 1; i <= n; i++) {
-        if (*c == b[i]) { 
-            cout << i << endl;
-            return 0;
-        }
-    }
-
+    
+    cout << a;
     return 0;
 }
