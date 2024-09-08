@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-void reverseSubstr(string &str, int start, int end) {
+void reverseSubstr(string &str, iㅠㄹㅇ류nt start, int end) {
     while (start < end) {
         swap(str[start], str[end]);
         start++;
