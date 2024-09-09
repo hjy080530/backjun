@@ -1,24 +1,30 @@
 #include <iostream>
-#include <string>
+
 using namespace std;
 
-void reverseSubstr(string &str, iㅠㄹㅇ류nt start, int end) {
-    while (start < end) {
-        swap(str[start], str[end]);
-        start++;
-        end--;
+int main(){
+    int n,k;
+    string h,v;
+    cin>>n>>k;
+    cin>>h;cacas˜
+    k--;
+    k=k%n;
+    if((n-k)%2==0){
+        for(int i=k+1; i<n; i++){
+            printf("%c",h[i]);
+        }
+        for (int i=0; i<=k; i++)
+        {
+            printf("%c",h[i]);
+        }
     }
-}
-
-int main() {
-    int n, m;
-    string a;
-    cin >> n >> m;
-    cin >> a;
-    for (int i=0; i<=n-m; i++) {
-        reverseSubstr(a, i, i + m - 1);
+    else{
+        for(int i=0; i<k; i++){
+            for(int j=i; j<j+k; j++){
+                h[i]=v;
+                h
+            }
+        }
     }
-    
-    cout << a;
     return 0;
 }
