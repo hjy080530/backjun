@@ -6,7 +6,7 @@ int main(){
     int n,k;
     string h,v;
     cin>>n>>k;
-    cin>>h;cacas˜
+    cin>>h;cacas˜ㄴㅁㅊㅁㄴㅊㅁㅊ
     k--;
     k=k%n;
     if((n-k)%2==0){
